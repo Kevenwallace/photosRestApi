@@ -7,9 +7,3 @@ from .serializer import PhotosSeralizer
 class PhotosModelViewSet(ModelViewSet):
     queryset = Photos.objects.all()
     serializer_class = PhotosSeralizer
-    
-    
-    def get_queryset(self):
-        print(self)
-        return super().get_queryset()
-    

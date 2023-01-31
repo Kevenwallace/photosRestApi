@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Photos
 
-class PhotosSeralizer(serializers.ModelField):
+class PhotosSeralizer(serializers.ModelSerializer):
     class Meta:
         model = Photos
-        fieds = '__all__'
+        fields = '__all__'
