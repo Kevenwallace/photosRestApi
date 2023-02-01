@@ -4,7 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from .models import Photos
 from .serializer import PhotosSeralizer
 from rest_framework.authentication import BasicAuthentication
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from django.shortcuts import get_object_or_404
 from .permissions import IsOwner
 
