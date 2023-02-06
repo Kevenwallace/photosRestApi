@@ -7,5 +7,5 @@ class Photos (models.Model):
     user = get_user_model()
     titulo = models.CharField(max_length=250)
     descricao = models.TextField("")
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to='photosApi/imagens/%Y/%m/%d/')
     autor = models.ForeignKey(user, on_delete=models.CASCADE)

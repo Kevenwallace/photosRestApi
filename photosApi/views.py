@@ -12,7 +12,6 @@ from .permissions import IsOwner
 
 # Create your views here.
 class PhotosModelViewSet(ModelViewSet):
-    authentication_classes = [BasicAuthentication,]
     permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Photos.objects.all()
     serializer_class = PhotosSeralizer
