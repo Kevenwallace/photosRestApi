@@ -49,3 +49,4 @@ class PhotosModelViewSet(ModelViewSet):
         if id is not None:
             qr = qr.filter(id=id)
         return qr
+    

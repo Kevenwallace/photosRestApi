@@ -8,6 +8,6 @@ class AuthorsModel(AbstractUser):
     email = models.EmailField(max_length=250, unique=True, error_messages={'unique': "O email cadastrado já existe."})
     fullname = models.CharField(max_length=250)
     is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'email'

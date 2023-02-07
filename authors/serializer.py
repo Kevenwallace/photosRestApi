@@ -35,16 +35,12 @@ class AuthorsSerializer(serializers.ModelSerializer):
             'password',
             'password_confirm',
             'email',
-            'is_staff',
-            'is_superuser',
         )
 
     def save(self):
         conta = AuthorsModel(
             email=self.validated_data['email'], 
             username=self.validated_data['username'],
-            is_staff=self.validated_data['is_staff'],
-            is_superuser=self.validated_data['is_superuser']
         )
         password = self.validated_data['password']
         password_confirm = self.validated_data['password_confirm']
